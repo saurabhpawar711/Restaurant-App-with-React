@@ -5,6 +5,8 @@
     align-items: center;
     background: rgb(88, 16, 16);
     border-radius: 50px;
+    cursor: pointer;
+    height: 50px;
 }
 
 h4 {

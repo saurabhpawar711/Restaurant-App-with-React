@@ -5,10 +5,12 @@
 .nav-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: brown;
     padding: 0px 50px;
     width: 100%;
     color: #fff;
     position: fixed;
     top: 0;
+    height: 60px;
 }
