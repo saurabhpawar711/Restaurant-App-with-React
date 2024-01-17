@@ -1,0 +1,9 @@
+.summary {
+    padding: 10px;
+    background: rgb(51, 50, 50);
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    margin: 20px auto;
+}
