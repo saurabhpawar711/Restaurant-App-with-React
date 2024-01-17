@@ -26,7 +26,7 @@ const Menu = () => {
             <div className="item-quantity">
               <div>
                 <label style={{fontWeight: "bold"}}>Quantity:</label>
-                <input type="number" className="quantity-input" />
+                <input type="number" value={1} className="quantity-input" />
               </div>
               <button className="add-btn">+Add</button>
             </div>
