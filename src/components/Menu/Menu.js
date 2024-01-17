@@ -17,10 +17,21 @@ const Menu = () => {
     <div className="menu">
       {menuList.map((item) => (
         <div className="item">
-          <h3>{item.name}</h3>
-          <p>{item.description}</p>
-          <h2>&#8377;{item.price}</h2>
-          <hr/>
+          <div className="items">
+            <div className="item-details">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <h2>&#8377;{item.price}</h2>
+            </div>
+            <div className="item-quantity">
+              <div>
+                <label style={{fontWeight: "bold"}}>Quantity:</label>
+                <input type="number" className="quantity-input" />
+              </div>
+              <button className="add-btn">+Add</button>
+            </div>
+          </div>
+          <hr />
         </div>
       ))}
     </div>

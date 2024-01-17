@@ -1,8 +1,14 @@
-.header {
+
+* {
+    box-sizing: border-box;
+}
+.nav-header {
     display: flex;
     justify-content: space-between;
     background: brown;
     padding: 0px 50px;
+    width: 100%;
     color: #fff;
+    position: fixed;
+    top: 0;
 }
-
