@@ -1,0 +1,19 @@
+.cart-header {
+    padding: 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(88, 16, 16);
+    border-radius: 50px;
+}
+
+h4 {
+    margin: 0px 10px;
+}
+
+.cart-items {
+    background: brown;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
