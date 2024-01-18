@@ -7,15 +7,30 @@ import CartContext from "../../cart-context/cartContext";
 
 const ModalOverlay = (props) => {
   const cartCtx = useContext(CartContext);
+
   const totalAmount = cartCtx.items.reduce((acc, curr) => {
     return acc + curr.price * curr.quantity;
   }, 0);
+
+  const increaseQty = (id) => {
+    cartCtx.deleteItem(id, 1);
+  };
+
+  const decreaseQty = (id) => {
+    cartCtx.deleteItem(id, -1);
+  };
+
   return (
     <div className="modal-overlay">
       <div className="modal">
         <div className="item-details">
           {cartCtx.items.map((item) => (
-            <CartItem key={item.id} item={item} />
+            <CartItem
+              key={item.id}
+              item={item}
+              increaseQty={increaseQty}
+              decreaseQty={decreaseQty}
+            />
           ))}
         </div>
         <div className="item-total">

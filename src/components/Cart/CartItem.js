@@ -3,6 +3,14 @@ import React from "react";
 import "./CartItem.css";
 
 const CartItem = (props) => {
+  const increaseQty = (id) => {
+    props.increaseQty(id);
+  };
+
+  const decreaseQty = (id) => {
+    props.decreaseQty(id);
+  };
+
   return (
     <div>
       <div className="cart-item">
@@ -14,8 +22,12 @@ const CartItem = (props) => {
           </div>
         </div>
         <div className="buttons">
-          <button className="btn">+</button>
-          <button className="btn">-</button>
+          <button className="btn" onClick={() => increaseQty(props.item.id)}>
+            +
+          </button>
+          <button className="btn" onClick={() => decreaseQty(props.item.id)}>
+            -
+          </button>
         </div>
       </div>
       <hr />
