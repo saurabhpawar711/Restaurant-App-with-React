@@ -1,14 +1,14 @@
-
-import './App.css';
-import Header from './components/Header/Header';
-import Home from './components/Home/Home';
+import "./App.css";
+import CartProvider from "./cart-context/CartProvider";
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
-    <div className="App">
+    <CartProvider>
       <Header />
       <Home />
-    </div>
+    </CartProvider>
   );
 }
 

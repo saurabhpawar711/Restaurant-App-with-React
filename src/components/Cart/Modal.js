@@ -1,29 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactDOM from "react-dom";
 
 import "./Modal.css";
 import CartItem from "./CartItem";
+import CartContext from "../../cart-context/cartContext";
 
 const ModalOverlay = (props) => {
-  const cartItems = [
-    { name: "Veg Burger", description: "Fresh Veggies Burger", price: 89 },
-    {
-      name: "Chicken Burger",
-      description: "Delicious Chicken Burger",
-      price: 129,
-    },
-  ];
+  const cartCtx = useContext(CartContext);
+  const totalAmount = cartCtx.items.reduce((acc, curr) => {
+    return acc + curr.price * curr.quantity;
+  }, 0);
   return (
     <div className="modal-overlay">
       <div className="modal">
         <div className="item-details">
-          {cartItems.map(item => (
-            <CartItem />
+          {cartCtx.items.map((item) => (
+            <CartItem key={item.id} item={item} />
           ))}
         </div>
         <div className="item-total">
           <h3>Total Amount</h3>
-          <h3>&#8377;199</h3>
+          <h3>&#8377;{totalAmount}</h3>
         </div>
         <div className="buttons">
           <button className="close-btn" onClick={props.closeCart}>
